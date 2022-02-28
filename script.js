@@ -3,8 +3,8 @@ function computerPlay(choices) {
 }
 
 function match(playerSelection, computerSelection) {
-  playerSelection = playerSelection.toLower();
-  computerSelection = computerSelection.toLower();
+  playerSelection = playerSelection.toLowerCase();
+  computerSelection = computerSelection.toLowerCase();
 
   if (playerSelection === "rock") {
     if (computerSelection === "paper") {
@@ -36,4 +36,7 @@ function match(playerSelection, computerSelection) {
 }
 
 let choices = ["Rock", "Paper", "Scissors"];
+let playerSelection = "Rock";
+let computerSelection = computerPlay(choices);
+console.log(match(playerSelection, computerSelection));
 // console.log(computerPlay(choices));
