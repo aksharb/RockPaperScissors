@@ -1,16 +1,17 @@
-function computerPlay(choices) {
+function computerPlay() {
+  let choices = ["rock", "paper", "scissors"];
   return choices[Math.floor(Math.random() * 3)];
 }
 
-function match(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
   computerSelection = computerSelection.toLowerCase();
 
   if (playerSelection === "rock") {
     if (computerSelection === "paper") {
-      return "You Lose! Paper beats rock";
+      return "You Lose! Paper beats Rock";
     } else if (computerSelection === "scissors") {
-      return "You win! Rock beats scissors";
+      return "You win! Rock beats Scissors";
     } else {
       return "It's a tie! You both chose Rock";
     }
@@ -34,9 +35,3 @@ function match(playerSelection, computerSelection) {
     return "Invalid choice!";
   }
 }
-
-let choices = ["Rock", "Paper", "Scissors"];
-let playerSelection = "Rock";
-let computerSelection = computerPlay(choices);
-console.log(match(playerSelection, computerSelection));
-// console.log(computerPlay(choices));
